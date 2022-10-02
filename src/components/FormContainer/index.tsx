@@ -2,7 +2,7 @@ import EducationSection from './components/EducationSection';
 import ExperienceSection from './components/ExperienceSection';
 import PersonalInfoSection from './components/PersonalInfoSection';
 import SkillsSection from './components/SkillsSection';
-import SumarySection from './components/SumarySection';
+import SummarySection from './components/SummarySection';
 import styled from 'styled-components';
 
 function FormContainer() {
@@ -13,7 +13,7 @@ function FormContainer() {
   return (
     <FormWrapper>
       <PersonalInfoSection />
-      <SumarySection />
+      <SummarySection />
       <ExperienceSection />
       <SkillsSection />
       <EducationSection />
