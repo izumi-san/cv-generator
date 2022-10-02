@@ -1,9 +1,16 @@
-import TextInput from '../../TextInput';
+import CustomInput from './../../CustomInput';
 
 function PersonalInfoSection() {
   return (
     <section>
-      <TextInput value={'Nome'} />
+      <CustomInput
+        name={'Nome'}
+        value={'Nome'}
+        placeholder={'nome'}
+        type={'text'}
+        label={'First Name'}
+        onChange={() => console.log('top')}
+      />
     </section>
   );
 }

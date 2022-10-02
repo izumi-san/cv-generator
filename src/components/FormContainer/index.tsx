@@ -6,10 +6,9 @@ import SummarySection from './components/SummarySection';
 import styled from 'styled-components';
 
 function FormContainer() {
-
-    const FormWrapper = styled.div`
-      border: 1px solid;
-    `
+  const FormWrapper = styled.div`
+    border: 1px solid;
+  `;
   return (
     <FormWrapper>
       <PersonalInfoSection />
