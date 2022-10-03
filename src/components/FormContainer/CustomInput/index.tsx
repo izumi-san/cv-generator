@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import style from './CustomInput.module.scss';
+import { memo } from 'react';
 
 interface inputProps {
   value: string;
@@ -6,47 +7,25 @@ interface inputProps {
   type: string;
   label: string;
   placeholder: string;
-  onChange: () => void;
+  key?: string;
+  onChange: (e: any) => void;
 }
-
 function CustomInput(props: inputProps) {
-  const CustomInput = styled.input`
-    border: 1px solid;
-    border-radius: 8px;
-    height: 2rem;
-    padding-left: 0.5rem;
-    width: 100%;
-    font-size: 1rem;
-    &:focus {
-      outline: none;
-      box-shadow: 0px 5px 5px royalblue;
-      color: royalblue;
-      transition: 300ms;
-    }
-  `;
-
-  const CustomLabel = styled.label`
-    ${CustomInput}:focus ~ & {
-      color: royalblue;
-    } ;
-  `;
-
-  const InputWrapper = styled.div`
-    display: flex;
-    flex-direction: column-reverse;
-  `;
-
   return (
-    <InputWrapper>
-      <CustomInput
+    <div className={style.customInputWrapper}>
+      <input
+        className={style.customInput}
         value={props.value}
         type={props.type}
         name={props.name}
-        onChange={props.onChange}
-      ></CustomInput>
-      <CustomLabel htmlFor={props.name}>{` ${props.label} `}</CustomLabel>
-    </InputWrapper>
+        onChange={(e) => props.onChange(e)}
+      />
+      <label
+        className={style.customLabel}
+        htmlFor={props.name}
+      >{` ${props.label} `}</label>
+    </div>
   );
 }
 
-export default CustomInput;
+export default memo(CustomInput);

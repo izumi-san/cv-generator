@@ -1,0 +1,14 @@
+.formSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  & > section {
+    padding: 1rem;
+  }
+  @media (min-width: 320px){
+   & > section {
+    border: 1px solid;
+    display: grid;
+    gap: 1.5rem;
+  } 
+  }
+}

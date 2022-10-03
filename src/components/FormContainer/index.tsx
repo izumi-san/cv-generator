@@ -3,20 +3,43 @@ import ExperienceSection from './components/ExperienceSection';
 import PersonalInfoSection from './components/PersonalInfoSection';
 import SkillsSection from './components/SkillsSection';
 import SummarySection from './components/SummarySection';
-import styled from 'styled-components';
+import { useState } from 'react';
+import style from './FormSection.module.scss';
 
 function FormContainer() {
-  const FormWrapper = styled.div`
-    border: 1px solid;
-  `;
+  const personalInfos = {
+    firstName: '',
+    lastName: '',
+    title: '',
+    cep: '',
+    phoneNumber: '',
+    email: '',
+    linkedIn: '',
+  };
+
+  const [personalValues, setPersonalValues] = useState(personalInfos);
+
+  const handleInputs = (e) => {
+    const { name, value } = e.target;
+    console.log(name, value);
+
+    setPersonalValues({
+      ...personalValues,
+      [name]: value,
+    });
+  };
+
   return (
-    <FormWrapper>
-      <PersonalInfoSection />
+    <section className={style.formSection}>
+      <PersonalInfoSection
+        formValues={personalValues}
+        handleInputs={handleInputs}
+      />
       <SummarySection />
       <ExperienceSection />
       <SkillsSection />
       <EducationSection />
-    </FormWrapper>
+    </section>
   );
 }
 

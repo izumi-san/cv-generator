@@ -1,3 +1,10 @@
 .App {
+  padding-inline: 0.5rem;
+}
 
+@media (min-width: 40em) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+  }
 }
