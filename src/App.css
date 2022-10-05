@@ -1,5 +1,7 @@
 .App {
   padding-inline: 0.5rem;
+  background-color: #535974;
+  padding-top: 4rem;
 }
 
 @media (min-width: 40em) {

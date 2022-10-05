@@ -1,0 +1,17 @@
+.container {
+  background-color: #f0f8ff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  
+  .containerFields {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    div {
+      flex-grow: 1;
+    }
+    .inputCep {
+      width: 50rem;
+    }
+  }
+}

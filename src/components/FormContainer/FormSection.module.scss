@@ -4,11 +4,13 @@
   & > section {
     padding: 1rem;
   }
-  @media (min-width: 320px){
-   & > section {
-    border: 1px solid;
-    display: grid;
-    gap: 1.5rem;
-  } 
+  @media (min-width: 320px) {
+    & > section {
+      border: 1px solid;
+      display: flex;
+      gap: 1.5rem;
+      flex-direction: column;
+      border-radius: 8px;
+    }
   }
 }
