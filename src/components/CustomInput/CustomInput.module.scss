@@ -1,6 +1,6 @@
 .customInputWrapper {
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
+  font-size: 1rem;
   &:focus-within label {
     color: royalblue;
     transition: 300ms;

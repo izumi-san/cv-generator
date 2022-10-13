@@ -15,7 +15,7 @@ function CustomTextArea(props: textAreaProps) {
         className={style.textArea}
         onChange={props.onChange}
         placeholder={props.placeholder}
-        value={props.value}
+        value={props.value||'test'}
         name={props.name}
       ></textarea>
     </div>

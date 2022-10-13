@@ -13,6 +13,10 @@ interface inputProps {
 function CustomInput(props: inputProps) {
   return (
     <div className={style.customInputWrapper}>
+      <label
+        className={style.customLabel}
+        htmlFor={props.name}
+      >{` ${props.label} `}</label>
       <input
         className={style.customInput}
         value={props.value}
@@ -20,10 +24,6 @@ function CustomInput(props: inputProps) {
         name={props.name}
         onChange={(e) => props.onChange(e)}
       />
-      <label
-        className={style.customLabel}
-        htmlFor={props.name}
-      >{` ${props.label} `}</label>
     </div>
   );
 }

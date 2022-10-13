@@ -1,4 +1,4 @@
-import CustomInput from './../../CustomInput';
+import CustomInput from './../../../CustomInput';
 import style from './../../FormSection.module.scss'
 
 interface Props {
