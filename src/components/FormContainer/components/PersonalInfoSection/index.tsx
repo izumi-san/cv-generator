@@ -1,5 +1,5 @@
 import CustomInput from './../../CustomInput';
-import style from './PersonalInfoSection.module.scss';
+import style from './../../FormSection.module.scss'
 
 interface Props {
   formValues: {
