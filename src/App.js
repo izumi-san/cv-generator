@@ -1,6 +1,7 @@
 import style from './App.module.scss';
 import FormContainer from './components/FormContainer';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className={style.App}>
         <FormContainer />
       </div>
+      <Footer />
     </>
   );
 }
