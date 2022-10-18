@@ -1,11 +1,15 @@
 import style from './App.module.scss';
 import FormContainer from './components/FormContainer';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className={style.App}>
-      <FormContainer />
-    </div>
+    <>
+      <Header />
+      <div className={style.App}>
+        <FormContainer />
+      </div>
+    </>
   );
 }
 
